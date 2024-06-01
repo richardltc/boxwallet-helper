@@ -16,9 +16,9 @@ pub fn main() !void {
 
     const git_installed = try git.Git.IsInstalled(); //cmd.runCommandCheckOutput("git", "usage: git [-v | --version]2");
     if (git_installed) {
-        try out.print("Checking for Git...\t\t\t\t\t\t\t[{s}{s}{s}]\n", .{ green, tick, reset });
+        try out.print("Checking if Git is installed...\t\t\t\t\t\t[{s}{s}{s}]\n", .{ green, tick, reset });
     } else {
-        try out.print("Checking for Git...\t\t\t\t\t\t\t[{s}{s}{s}]\n", .{ red, cross, reset });
+        try out.print("Checking if Git is installed...\t\t\t\t\t\t[{s}{s}{s}]\n", .{ red, cross, reset });
     }
 
     try out.print("{s} {s} finished!...\n", .{ app.app.name, app.app.version });
